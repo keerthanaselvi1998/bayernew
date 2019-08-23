@@ -1,0 +1,58 @@
+body {
+    background-color: #F0F0F0;
+}
+
+@media only screen and (min-width: 600px) {
+    .background_setter {
+        max-width: 95px;
+        max-height: 95px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+    }
+    .grid-container>div {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    ul {
+        text-transform: capitalize;
+        display: table-row;
+        list-style-type: none;
+    }
+    #AboutUs_button {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    #OurProducts_button {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    a {
+        text-decoration: none;
+    }
+    .aboutus_div {
+        padding: 10px;
+    }
+    .ourproducts_div {
+        padding: 10px;
+    }
+    .OurProducts_contents {
+        margin-left: 10px;
+        font-size: 0.875rem;
+    }
+    .OurProducts_contents {
+        font-size: 0.875rem;
+    }
+    .row {
+        display: table-row;
+    }
+    .column {
+        display: inline;
+        margin-left: 50px;
+        font-size: 0.6875rem;
+    }
+}
