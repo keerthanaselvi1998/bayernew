@@ -9,7 +9,7 @@ body {
     max-height: 95px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .container {
         display: grid;
         grid-template-columns: auto auto auto auto auto;
@@ -22,7 +22,7 @@ body {
         font-size: 100px;
     }
     ul {
-        text-transform: capitalize;
+        
         display: table-row;
         list-style-type: none;
     }
@@ -101,7 +101,7 @@ body {
         font-size: 100px;
     }
     .collapsible {
-        color: white;
+        
         cursor: pointer;
         padding: 18px;
         width: 100%;
@@ -131,5 +131,10 @@ body {
         margin-left: 0px;
         padding: 5px;
         font-size: 0.7975rem;
+    }
+    .copyright {
+        display: inline;
+       float: right;
+        font-size: 0.6875rem;
     }
 }
