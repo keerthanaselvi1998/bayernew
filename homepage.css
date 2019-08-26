@@ -1,12 +1,15 @@
 body {
     background-color: #F0F0F0;
+    margin: 0px;
+    padding: 0px;
+}
+
+.background_setter {
+    max-width: 95px;
+    max-height: 95px;
 }
 
 @media only screen and (min-width: 600px) {
-    .background_setter {
-        max-width: 95px;
-        max-height: 95px;
-    }
     .container {
         display: grid;
         grid-template-columns: auto auto auto auto auto;
@@ -14,45 +17,119 @@ body {
         padding: 10px;
     }
     .grid-container>div {
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
+        text-align: left;
+        padding: 20px 50px;
+        font-size: 100px;
     }
     ul {
         text-transform: capitalize;
         display: table-row;
         list-style-type: none;
     }
+    .aboutus_div {
+        padding-bottom: 20px;
+    }
+    .ourproducts_div {
+        padding-bottom: 20px;
+    }
     #AboutUs_button {
         font-weight: bold;
         font-size: 1rem;
+        font-family: "Lato", sans-serif;
     }
     #OurProducts_button {
         font-weight: bold;
         font-size: 1rem;
+        font-family: "Lato", sans-serif;
     }
     a {
         text-decoration: none;
     }
-    .aboutus_div {
-        padding: 10px;
-    }
-    .ourproducts_div {
-        padding: 10px;
-    }
-    .OurProducts_contents {
-        margin-left: 10px;
-        font-size: 0.875rem;
-    }
     .OurProducts_contents {
         font-size: 0.875rem;
+        padding: 10px;
+    }
+    .AboutUs_contents {
+        font-size: 0.875rem;
+        padding: 10px;
     }
     .row {
         display: table-row;
+        padding: 10px;
     }
     .column {
         display: inline;
         margin-left: 50px;
+        font-size: 0.6975rem;
+    }
+    .copyright {
+        display: inline;
+        margin-left: 50px;
         font-size: 0.6875rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        padding: 0px;
+        margin: 0px;
+    }
+    .OurProducts {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: 15px;
+        width: 100%;
+        --box-shadow-color: white;
+        box-shadow: 1px 3px var(--box-shadow-color);
+    }
+    .AboutUs {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: 15px;
+        width: 100%;
+        --box-shadow-color: white;
+        box-shadow: 1px 3px var(--box-shadow-color);
+    }
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: auto;
+        padding: 0px;
+    }
+    .grid-container div {
+        text-align: center;
+        font-size: 100px;
+    }
+    .collapsible {
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+    }
+    .active,
+    .collapsible:hover {
+        background-color: #555;
+    }
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+    .row {
+        display: table-row;
+        padding: 20px;
+    }
+    .footer-links {
+        margin: 20px;
+    }
+    .column {
+        display: block;
+        margin-left: 0px;
+        padding: 5px;
+        font-size: 0.7975rem;
     }
 }

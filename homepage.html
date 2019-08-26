@@ -2,9 +2,36 @@
 
 <head>
     <link rel="stylesheet" href="homepage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
 
     </style>
+    <script>
+        $(document).ready(function() {
+            $(".foooter_logo").children().hide();
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|($(window).width() < 700)|Opera Mini/i.test(navigator.userAgent)) {
+                $(".background_setter").children().hide();
+                alert("HI");
+                $(".foooter_logo").children().show();
+            }
+        });
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 
 </head>
 
@@ -12,21 +39,21 @@
     <footer>
         <div class="container">
             <div class="background_setter">
-                <img src="https://mypetandi-test.bayer.com/profiles/bayer/bayer_ah/modules/bayer_misc/images/bayer_logo.png" class="img-fluid" alt="">
+                <img src="https://mypetandi-test.bayer.com/profiles/bayer/bayer_ah/modules/bayer_misc/images/bayer_logo.png" class="img_fluid" alt="">
             </div>
             <div class="OurProducts">
                 <div class="ourproducts_div">
-                    <a id="OurProducts_button">OUR PRODUCTS</a>
+                    <a id="OurProducts_button" class="collapsible">OUR PRODUCTS <i class="arrow"></i></a>
                 </div>
-                <ul class="OurProducts_contents" style="width: 10%">
-                    <li><a href="#">Dog Products</a></li>
+                <ul class="content">
+                    <li><a href="#">Dog Products </a></li>
                 </ul>
             </div>
-            <div class="About Us">
+            <div class="AboutUs">
                 <div class="aboutus_div">
-                    <a id="AboutUs_button">ABOUT US</a>
+                    <a id="OurProducts_button" class="collapsible">ABOUT US</a>
                 </div>
-                <ul class="AboutUs_contents">
+                <ul class="content">
                     <li>
                         <a href="#">
                             <p>About My Pet and I</p>
@@ -56,6 +83,10 @@
                 <p class="copyright">Copyright © Bayer AG</p>
             </div>
         </div>
+        <div class="container">
+            <div class="foooter_logo"> <img src="https://mypetandi-test.bayer.com/profiles/bayer/bayer_ah/modules/bayer_misc/images/bayer_logo.png" class="img_fluid" alt=""></div>
+        </div>
+
     </footer>
 </body>
 
